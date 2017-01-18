@@ -20,6 +20,13 @@ namespace Vidly.App_Start
             // Permitindo que um Movie possa ser mapeado para MovieDto e vice-versa.
             Mapper.CreateMap<Movie, MovieDto>();
             Mapper.CreateMap<MovieDto, Movie>().ForMember(m => m.Id, opt => opt.Ignore());
+
+            // Permitindo que um MembershipType possa ser mapeado para MembershipTypeDto.
+            Mapper.CreateMap<MembershipType, MembershipTypeDto>();
+
+            // Permitindo que um Genre possa ser mapeado para GenreDto.
+            Mapper.CreateMap<Genre, GenreDto>();
+
         }
     }
 }
